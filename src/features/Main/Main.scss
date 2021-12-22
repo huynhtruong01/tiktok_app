@@ -1,0 +1,20 @@
+.main {
+  padding-top: 62px;
+
+  &__container {
+    display: flex;
+    width: 1150px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  &__sidebar {
+    position: relative;
+    min-width: 356px;
+    height: 100vh;
+  }
+
+  &__content {
+    flex: 1 1 0;
+  }
+}
