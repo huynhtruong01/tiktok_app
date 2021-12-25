@@ -99,10 +99,10 @@
       padding: 0 10px;
       width: 88px;
       height: 28px;
-      transition: 0.2s ease-in;
+      transition: 0.15s ease-in;
 
       &:hover {
-        background-color: #f394a7;
+        background-color: #fdeaee;
       }
     }
 
@@ -111,6 +111,7 @@
 
       video {
         border-radius: 4px;
+        border: none;
       }
     }
 
