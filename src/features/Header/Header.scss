@@ -1,7 +1,7 @@
 .header {
   width: 100vw;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -98,7 +98,7 @@
       transition: 0.3s ease-in-out 0.3s;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: -5px;
         left: 39px;

@@ -3,15 +3,27 @@
   left: unset;
   padding: 0 8px;
   width: 356px;
-  height: 100vh;
+  height: calc(100vh - 62px);
   overflow-y: scroll;
   overflow-x: hidden;
   white-space: nowrap;
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  mask-size: 100% 20000px;
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+
+  &:hover {
+    -webkit-mask-position: left top;
+  }
 
   &__container {
     width: 100%;
     padding-top: 20px;
-    height: 2000px;
 
     &--scroll {
       width: 100%;
@@ -216,6 +228,7 @@
   &__footer {
     padding: 8px;
     padding-top: 16px;
+    padding-bottom: 24px;
 
     a {
       display: inline-block;
@@ -245,6 +258,7 @@
       font-weight: 600;
       font-size: 12px;
       line-height: 12px;
+      padding: 5px 6px 12px;
     }
   }
 
@@ -255,9 +269,10 @@
     margin-top: 8px;
   }
 
+  // scrollbar css
   &::-webkit-scrollbar {
     border-radius: 0;
-    width: 8px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
@@ -267,6 +282,6 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
