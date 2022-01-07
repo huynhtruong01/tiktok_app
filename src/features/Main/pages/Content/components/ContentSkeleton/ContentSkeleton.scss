@@ -1,0 +1,58 @@
+.content__skeleton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 269px;
+  max-width: 269px;
+  height: 478.21px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .content__loading {
+    position: relative;
+    left: calc(-25px / 2);
+    z-index: 100;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table-cell;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      animation-duration: 0.8s;
+      animation-name: revolve;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      mix-blend-mode: darken;
+    }
+
+    &:before {
+      background: rgb(77, 232, 244);
+    }
+
+    &:after {
+      background: rgb(253, 62, 62);
+      animation-delay: calc(0.8s / -2);
+    }
+  }
+}
+
+@keyframes revolve {
+  0% {
+    left: 0;
+  }
+  25% {
+    transform: scale(calc(1 + 0.2));
+  }
+  50% {
+    left: 25px;
+  }
+  75% {
+    transform: scale(calc(1 - 0.2));
+  }
+  100% {
+    left: 0;
+  }
+}
